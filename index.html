@@ -9,11 +9,13 @@
       function testInfo(phoneInput){
         var OK = re.exec(phoneInput.value);
         if (!OK){
+            // window.alert(RegExp.input + " Não é um número de telefone com código de área!");
             var alerta = document.getElementById("alerta2")
             alerta.style.display = 'block'
             alerta.innerHTML = 'Número invalido'
             setTimeout(function(){ alerta.style.display = 'none';}, 2000)
         }else{
+            // window.alert("Obrigado, o seu número de telefone é " + OK[0]);
             var alerta = document.getElementById("alerta")
             alerta.style.display = 'block'
             alerta.innerHTML = 'Número valido'
