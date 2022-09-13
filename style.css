@@ -1,8 +1,15 @@
-container{
+body{
+    background-color: aliceblue;
+}
+#centro{
  max-width: 500px;
  background-color: beige;
  text-align: center;
- margin: auto;   
+ margin: auto; 
+ box-shadow: 1px 2px 10px  rgba(0, 0, 0, 0.315);
+ margin-top: 50vh;
+ padding: 15px;
+ /* padding-bottom: 30px; */
 }
 #alerta,#alerta2{
     max-width: 490px;
