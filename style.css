@@ -1,0 +1,12 @@
+container{
+ max-width: 500px;
+ background-color: beige;
+ text-align: center;
+ margin: auto;   
+}
+#alerta,#alerta2{
+    max-width: 490px;
+    text-align: center;
+    margin: auto; 
+    margin-top: 10px;
+}
