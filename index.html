@@ -8,14 +8,17 @@
     <script src="javascript.js"></script>
   </head>
   <header>
-
+    <h1>Regex</h1>
   </header>
   <body>
     <div id="centro">
         <p>Informe o seu número de Celular (com código de área) e então clique em "Validar".
             <br>O formato esperado é: (DD) 99999-9999.</p>
         <form action="#">
-          <input id="phone"><button onclick="testInfo(document.getElementById('phone'));">Validar</button>
+          <input id="phone"  onkeyup=mmascararTel() ><button  onclick="testInfo(document.getElementById('phone'));">Validar</button>
+          <p>Informe o seu email e então clique em "Validar Email".
+            <br>O formato esperado é: nome@exemplo.com</p>
+          <input id="email"><button  onclick="testEmail(document.getElementById('email'));" >Validar Email</button>
         </form>
         <div id="alerta" class="alert alert-primary" role="alert" style="display: none;">
         </div>
