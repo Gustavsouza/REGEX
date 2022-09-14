@@ -16,6 +16,9 @@
             <br>O formato esperado é: (DD) 99999-9999.</p>
         <form action="#">
           <input id="phone"  onkeyup=mmascararTel() ><button  onclick="testInfo(document.getElementById('phone'));">Validar</button>
+          <p>Informe o seu número de Telefone FIXO (com código de área) e então clique em "Validar".
+            <br>O formato esperado é: (DD) 9999-9999.</p>
+          <input id="phonefixo"  onkeypress="mask(this, phonefixo)"><button  onclick="testInfo(document.getElementById('phone'));">Validar</button>
           <p>Informe o seu email e então clique em "Validar Email".
             <br>O formato esperado é: nome@exemplo.com</p>
           <input id="email"><button  onclick="testEmail(document.getElementById('email'));" >Validar Email</button>

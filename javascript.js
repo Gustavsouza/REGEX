@@ -2,7 +2,6 @@
 //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions
 
 //   valida email aqui
-//   var re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 function testInfo(phoneInput){
 var re = /^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$/;
 var OK = re.exec(phoneInput.value);
@@ -60,3 +59,28 @@ window.onload = function(){
 		mascara( this, mtel );
 	}
 }
+
+
+/*Máscara telefone fixo*/
+function mask(o, f) {
+    setTimeout(function() {
+      var v = phonefixo(o.value);
+      if (v != o.value) {
+        o.value = v;
+      }
+    }, 1);
+  }
+  function phonefixo(v) {
+    var r = v.replace(/\D/g, "");
+    r = r.replace(/^0/, "");
+    if (r.length > 10) {
+      r = r.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
+    } else if (r.length > 5) {
+      r = r.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+    } else if (r.length > 2) {
+      r = r.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
+    } else {
+      r = r.replace(/^(\d*)/, "($1");
+    }
+    return r;
+  }
