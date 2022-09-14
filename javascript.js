@@ -1,7 +1,7 @@
 
 //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions
 
-//   valida email aqui
+
 function testInfo(phoneInput){
 var re = /^\([1-9]{2}\) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$/;
 var OK = re.exec(phoneInput.value);

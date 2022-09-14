@@ -18,6 +18,7 @@ body{
     text-align: center;
     margin: auto; 
     margin-top: 10px;
+    animation-delay: 110ms;
 }
 input{
     margin: 5px;
